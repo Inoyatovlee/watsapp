@@ -10,13 +10,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'WhatsApp',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'WhatsApp Le',
+      home: Scaffold(
+        body: Center(
+          child: Text("Demao Page"),
+        ),
       ),
-      // home:  ,
     );
   }
 }
