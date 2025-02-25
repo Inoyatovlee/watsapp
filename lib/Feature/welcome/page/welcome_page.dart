@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wat_sa/Feature/welcome/comfig/colors.dart';
-import 'package:wat_sa/Feature/welcome/comfig/image.dart';
+import 'package:wat_sa/Feature/welcome/widgets/privacy_and_terms.dart';
+import 'package:wat_sa/common/utils/colors.dart';
+import 'package:wat_sa/common/utils/image.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -8,7 +9,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.tkok,
+      backgroundColor: AppColor.backgroundDark,
       body: Column(
         children: [
           Expanded(
@@ -31,41 +32,15 @@ class WelcomePage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: AppColor.oq),
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                child: RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                    text: "Read our",
-                    style: TextStyle(color: AppColor.seri, height: 1.5),
-                    children: [
-                      TextSpan(
-                        text: "Privacy Policy",
-                        style: TextStyle(
-                          color: AppColor.okok,
-                        ),
-                      ),
-                      const TextSpan(
-                          text: 'Tap "Agree and contiue" to accept the '),
-                      TextSpan(
-                        text: "Terms of Services.",
-                        style: TextStyle(
-                          color: AppColor.okok,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              PrivacyAndTerms(),
               SizedBox(
                 height: 42,
                 width: MediaQuery.of(context).size.width - 100,
                 child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColor.yashil,
-                        foregroundColor: AppColor.tkok,
+                        backgroundColor: AppColor.greenDark,
+                        foregroundColor: AppColor.backgroundDark,
                         splashFactory: NoSplash.splashFactory,
                         elevation: 0,
                         shadowColor: Colors.transparent),
@@ -73,7 +48,7 @@ class WelcomePage extends StatelessWidget {
               ),
               const SizedBox(height: 50),
               Material(
-                color: AppColor.tokok,
+                color: AppColor.blueDark,
                 borderRadius: BorderRadius.circular(20),
                 child: InkWell(
                   onTap: () {},
