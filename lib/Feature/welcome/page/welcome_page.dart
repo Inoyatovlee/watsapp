@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wat_sa/Feature/welcome/widgets/privacy_and_terms.dart';
 import 'package:wat_sa/common/utils/colors.dart';
 import 'package:wat_sa/common/utils/image.dart';
+import 'package:wat_sa/common/widgets/custom_elevated_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -33,18 +34,9 @@ class WelcomePage extends StatelessWidget {
                     color: AppColor.oq),
               ),
               PrivacyAndTerms(),
-              SizedBox(
-                height: 42,
-                width: MediaQuery.of(context).size.width - 100,
-                child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColor.greenDark,
-                        foregroundColor: AppColor.backgroundDark,
-                        splashFactory: NoSplash.splashFactory,
-                        elevation: 0,
-                        shadowColor: Colors.transparent),
-                    child: const Text("AGREE AND CONTINUE")),
+              CustomElevatedButton(
+                onPressed: () {},
+                text: "AGREE AND CONTINUE",
               ),
               const SizedBox(height: 50),
               Material(
