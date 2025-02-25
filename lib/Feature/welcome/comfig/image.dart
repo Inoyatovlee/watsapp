@@ -1,3 +1,3 @@
 class AppImage {
-  static String add_ = 'assets/images/w_marke.jpg';
+  static String welkome = 'assets/images/w_marke.jpg';
 }

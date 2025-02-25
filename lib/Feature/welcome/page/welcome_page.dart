@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wat_sa/Feature/welcome/comfig/colors.dart';
+import 'package:wat_sa/Feature/welcome/comfig/image.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -6,15 +8,15 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF111B21),
+      backgroundColor: AppColor.tkok,
       body: Column(
         children: [
-          const Expanded(
+          Expanded(
             child: Align(
               alignment: Alignment.bottomCenter,
               child: CircleAvatar(
                 radius: 140,
-                backgroundImage: AssetImage("assets/images/w_marke.jpg"),
+                backgroundImage: AssetImage(AppImage.welkome),
               ),
             ),
           ),
@@ -22,33 +24,34 @@ class WelcomePage extends StatelessWidget {
           Expanded(
               child: Column(
             children: [
-              const Text(
+              Text(
                 "Welcome to WhatsApp",
                 style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white),
+                    color: AppColor.oq),
               ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 child: RichText(
                   textAlign: TextAlign.center,
-                  text: const TextSpan(
+                  text: TextSpan(
                     text: "Read our",
-                    style: TextStyle(color: Color(0xFF8696A0), height: 1.5),
+                    style: TextStyle(color: AppColor.seri, height: 1.5),
                     children: [
                       TextSpan(
                         text: "Privacy Policy",
                         style: TextStyle(
-                          color: Color(0xFF53BDEB),
+                          color: AppColor.okok,
                         ),
                       ),
-                      TextSpan(text: 'Tap "Agree and contiue" to accept the '),
+                      const TextSpan(
+                          text: 'Tap "Agree and contiue" to accept the '),
                       TextSpan(
                         text: "Terms of Services.",
                         style: TextStyle(
-                          color: Color(0xFF53BDEB),
+                          color: AppColor.okok,
                         ),
                       ),
                     ],
@@ -61,8 +64,8 @@ class WelcomePage extends StatelessWidget {
                 child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF00A884),
-                        foregroundColor: const Color(0xFF111B21),
+                        backgroundColor: AppColor.yashil,
+                        foregroundColor: AppColor.tkok,
                         splashFactory: NoSplash.splashFactory,
                         elevation: 0,
                         shadowColor: Colors.transparent),
@@ -70,27 +73,28 @@ class WelcomePage extends StatelessWidget {
               ),
               const SizedBox(height: 50),
               Material(
-                color: const Color(0xFF182229),
+                color: AppColor.tokok,
                 borderRadius: BorderRadius.circular(20),
                 child: InkWell(
                   onTap: () {},
                   borderRadius: BorderRadius.circular(20),
                   splashFactory: NoSplash.splashFactory,
-                  highlightColor: const Color(0xFF09141A),
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  highlightColor: AppColor.qora,
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.language, color: Color(0xFF00A884)),
-                        SizedBox(width: 10),
+                        Icon(Icons.language, color: AppColor.salati),
+                        const SizedBox(width: 10),
                         Text(
                           "English",
-                          style: TextStyle(color: Color(0xFF00A884)),
+                          style: TextStyle(color: AppColor.salati),
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Icon(Icons.keyboard_return_outlined,
-                            color: Color(0xFF00A884)),
+                            color: AppColor.salati),
                       ],
                     ),
                   ),
