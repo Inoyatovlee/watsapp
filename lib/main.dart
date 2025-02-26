@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wat_sa/Feature/auth/pages/login_page.dart';
 import 'package:wat_sa/Feature/welcome/page/welcome_page.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       // theme: lightTheme(),
       // darkTheme: darkTheme(),
       themeMode: ThemeMode.system,
-      home: WelcomePage(),
+      home: LoginPage(),
     );
   }
 }
