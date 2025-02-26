@@ -11,7 +11,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.backgroundDark,
+      backgroundColor: AppColor.backgroundDark, // shuni o'chirb qo'lsa boladi
       body: Column(
         children: [
           Expanded(
@@ -34,13 +34,13 @@ class WelcomePage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: AppColor.oq),
               ),
-              PrivacyAndTerms(),
+              const PrivacyAndTerms(),
               CustomElevatedButton(
                 onPressed: () {},
                 text: "AGREE AND CONTINUE",
               ),
               const SizedBox(height: 50),
-              LanguageButton()
+              const LanguageButton()
             ],
           )),
         ],
